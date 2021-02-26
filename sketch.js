@@ -111,10 +111,10 @@ function draw() {
     spawnObstacles();
     
     if(obstaclesGroup.isTouching(trex)){
-     //   gameState = END;
-    //dieSound.play();   
+       gameState = END;
+    dieSound.play();   
     
-    trex.velocityY=-10
+    //trex.velocityY=-10
       
     }
   }
