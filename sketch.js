@@ -68,7 +68,7 @@ function setup() {
   console.log("Hello" + 5);
   
   trex.setCollider("circle",0,0,40);
-  trex.debug = true
+ // trex.debug = true
   
   score = 0;
   
@@ -125,7 +125,13 @@ function draw() {
      
       ground.velocityX = 0;
       trex.velocityY = 0
+     if(mousePressedover("gameOver")){
+        gameState = PLAY;
+       score = 0;
+      obstaclesGroup.destroyEach();
+      cloudsGroup.destroyEach();
      
+     }
       //change the trex animation
       trex.changeAnimation("collided", trex_collided);
      
